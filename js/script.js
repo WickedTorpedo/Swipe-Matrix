@@ -10,7 +10,11 @@
 var tabHead = document.querySelector('.tab__head');
 var tabHeader = document.querySelectorAll('.tab__header');
 var tabContent = document.querySelectorAll('.panel__content');
-document.querySelector('.panel').style.height = (tabContent[0].offsetHeight + 10) + 'px';
+
+document.onload = function () {
+  document.querySelector('.panel').style.height = (tabContent[0].offsetHeight + 10) + 'px';
+}
+
 
 tabHead.onclick = function (event) {
   var value;
@@ -103,7 +107,7 @@ function clearAll() {
     cells[iteration].value = '';
   }
 }
-/* === end ===  */  
+/* === end ===  */
 
 
 
