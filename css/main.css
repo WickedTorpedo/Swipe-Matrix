@@ -1,0 +1,293 @@
+body {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+    background: url('../img/math.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+
+    position: relative;
+}
+
+/* === Tabs begin === */
+
+.clearifx{
+  content: ' ';
+  display: table;
+}
+.clearifx:after{
+  clear: both;
+}
+
+
+.tab{
+  color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.tab__head{
+  width: 100%;
+  padding: 0;
+
+}
+.tab__header{
+  float: left;
+  width: 100%;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-family: cursive;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+  color: #fff;
+  background: #222;
+  opacity: 0.5;
+  font-size: 0.7em;
+  text-decoration: line-through;
+  text-align: center;
+}
+
+@media (min-width: 450px){
+  .tab__header{
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 660px){
+  .tab__header{
+    font-size: 1.2em;
+  }
+}
+
+.active{
+  background: #566777;
+  transform: scaleY(1.2);
+  opacity: 1;
+  position: relative;
+  z-index: 100;
+  text-decoration: none;
+   border-bottom: 4px solid gold;
+   transition: all .4s ease-in-out;
+}
+
+.panel {
+  position: relative;
+}
+
+.panel__content{
+  position: absolute;
+  display: none;
+  width: 100%;
+}
+
+.redbull{
+  color: rgb(248, 1, 1);
+  font-size: 1.4em;
+}
+.showBlock {
+  animation: showTab 0.7s ease-in-out 1;
+}
+@keyframes showTab {
+0% {display: none; opacity: 0;}
+100% {display: none; opacity: 1;}
+}
+
+
+
+/* === Tabs end === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === begin === */
+.selected{
+  border-radius: 5px;
+  padding: 7px;
+  text-align: center;
+}
+
+.config {
+  margin-bottom: 20px;
+}
+
+.text_default {
+    font: 1.2em "Courier New",monospace;
+    color: #d15128;
+}
+
+
+/* xl - >=1200
+   lg - >=992
+   md - >=768
+   sm - >=576
+*/
+.head-col{
+  font-size: 85%;
+}
+.col {
+  padding: 1px;
+  position: relative;
+}
+
+.col:last-child::before{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -2px;
+  content: '';
+  width: 2px;
+  height: calc(100% + 5px);
+  background: #000;
+}
+
+.col:last-child input{
+  background: #93b1f4;
+  color: red;
+  opacity: 1;
+}
+
+.col:last-child input::placeholder {
+  color: red;
+}
+
+input[type='text']{
+  padding: 5px;
+  white-space: nowrap;
+  border-radius: 25%;
+  max-width: 30px;
+  border: 1px solid #4aa9bf;
+  background: #e2e7ea;
+  font-size: 1.3em;
+  font-weight: bold;
+  outline: none;
+}
+input[type='text']::placeholder{
+  opacity: 0.8;
+}
+
+
+.wrapper{
+  padding: 30px 15px;
+}
+
+
+@media (max-width: 350px) {
+  .container{
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+
+@media(min-width: 500px) {
+  input[type='text']{
+    max-width: 50px;
+  }
+  .head-col{
+    font-size: 120%;
+  }
+  .wrapper{
+    padding: 30px 30px;
+  }
+}
+
+@media(min-width: 640px) {
+  .col:last-child::before{
+    display: block;
+  }
+
+  input[type='text']{
+    padding: 10px;
+  }
+
+  .col {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .wrapper{
+    padding: 30px 100px;
+  }
+
+  input[type='text']{
+    max-width: 80px;
+  }
+}
+
+.btn-group {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn{
+  display: block;
+  padding: 10px 18px;
+  white-space: nowrap;
+  border-radius: 10px;
+  font-size: 1.2em;
+  color: #fff;
+  transition: all .2s ease;
+  opacity: 0.8;
+  outline: none;
+  box-shadow: none;
+  font-family: cursive;
+  transition: all .25s ease;
+  opacity: 0.9;
+  margin: 30px 0;
+}
+.btn + .btn{
+margin-left: 20px;
+}
+.btn:hover{
+  opacity: 1;
+  transform: scale(1.1);
+  transition: all .25s ease;
+}
+
+
+.report p {
+  line-height: 150%;
+}
+
+/* === end === */

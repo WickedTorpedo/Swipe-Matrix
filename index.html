@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Метод Прогонки</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<body>
+    <!-- Таблица решение -->
+
+
+      <div class="container task-1 mt-4">\
+
+        <div class="tab">
+          <!-- 1-Таб -->
+
+
+          <div class="tab__head clearifx bg-light">
+            <div class="tab__header active" data-tab="0">Калькулятор</div>
+            <div class="tab__header" data-tab="1">Метод Прогонки</div>
+            <div class="tab__header" data-tab="2">Инструкция</div>
+          </div>
+
+          <div class="panel">
+
+            <div class="panel__content show first">
+              <div class="wrapper bg-light">
+
+                <div class="configs">
+
+                  <div class="config">
+                    <label class="text_default">Количество переменных
+                    <select class="selected selected-1">
+                      <option value="2">2</option>
+                      <option value="3" selected="selected">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                    </select>
+                     </label>
+                  </div>
+
+                  <div class="config">
+                    <span class="text_default">Количество чисел после запятой</span>
+                    <select class="selected selected-2">
+                      <option value="0">Нет</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4" selected="selected">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                    </select>
+                  </div>
+
+                </div>
+
+                <table>
+
+                  <thead >
+                    <tr class="head-row">
+                      <th class="head-col" colspan="3"> <span class="font-cursive error-dark">Matrix (A)</span></span></th>
+                      <th class="head-col"><span class="error-danger font-cursive">Result (B)</span></th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="body-cell">
+
+                    <tr class="row">
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                    </tr>
+
+                    <tr class="row">
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                    </tr>
+
+                    <tr class="row">
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                      <td class="col"><input type="text" class=" input" placeholder="0"></td>
+                    </tr>
+
+                  </tbody>
+
+                </table>
+
+                <div class="btn-group">
+                  <input type="button" class="btn btn-submit bg-darked" value="Решить">
+                  <input type="button" class="btn btn-clear bg-danger" value="Очистить">
+                </div>
+
+
+                <div class="report">
+
+                </div>
+              </div>
+            </div>
+
+            <!-- -->
+            <div class="panel__content second">
+
+              <div class="wrapper bg-light">
+                <p class="error-dark mb-3">
+                  <span class="big redbull">M</span>етод прогонки является частным случаем метода Гаусса и используется для решения систем линейных уравнений вида
+                  A<sub>x</sub> = B, где A -  трёхдиагональная матрица.
+                  <span class="error-danger">Трёхдиагональной матрицей</span> называется матрица такого вида, где во всех остальных местах,
+                   кроме главной диагонали и двух соседних с ней, стоят нули.
+                </p>
+                <p class="error-dark mb-3">
+                <span class="big redbull">M</span>етод прогонки состоит из двух этапов: прямой прогонки и обратной прогонки. На первом этапе определяются
+                  прогоночные коэффициенты, а на втором – находят неизвестные <span class="error-danger">x</span>.
+                </p>
+                <h3 class="text-center mb-3"><span class="error-primary big">Алгоритм выполнения метода прогонки</span></h3>
+                <span class="error-dark">СЛАУ имеет вид:</span>
+                <p class="error-dark mb-3">
+                  <img src="img/tridiagonal-matrix.png" alt="img" class="mw-90">
+                </p>
+                <p class="error-dark mb-3">
+                    <span class="big redbull">П</span>рямая прогонка состоит в вычислении прогоночных коэффициентов αi и βi , где i – номер строки матрицы.
+                    Этот этап выполняется при i = 1...n строго по возрастанию значения i.
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="error-danger">1.</span> В первой строке матрицы (i = 1) используются формулы
+                   <img src="img/row_1.png" alt="row_1" class="ml-2 mw-90">
+                </p>
+
+
+                <p class="error-dark mb-3">
+                  <span class="error-danger">2.</span> Для строк i от 2 до n-1 используются рекуррентные формулы:
+                   <img src="img/row_2.png" alt="row_2" class="ml-2 mw-90">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="error-danger">3.</span> При i = n прямая прогонка завершается вычислением:
+                   <img src="img/row_2.png" alt="row_3" class="ml-2 mw-90 mb-2"> <br>
+                   <span class="ml-2">
+                     После этого производится обратная прогонка, в которой происходит вычисление неизвестных xi. <br>
+                     Этот этап выполняется при i = n...1 строго поубыванию значения i.
+                   </span>
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="error-danger">4.</span> В последней строке матрицы (i = n) x<sub>n</sub> = β<sub>n</sub>
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="error-danger">5.</span> Для всех остальных строк при i от n-1 до 1 применяется формула: <br>
+                  <img src="img/xi.png" alt="Xi" class="ml-2 mw-90">
+                </p>
+
+                <h3 class="text-center mb-3"><span class="error-primary biggest">Пример решение слау по алгоритму</span></h3>
+
+
+                <p class="error-dark mb-3 text-center">
+                  <span class="text-left">Возьмём систему уравнений: </span><br>
+                  <img src="img/example_1.png" alt="example" class="mw-90 w-50">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="mb-1 d-block">Прямой Ход</span>
+                  <img src="img/forward_trace.png" alt="forward_trace" class="ml-2 mw-90">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="mb-1 d-block">Обратный Ход</span>
+                  <img src="img/reversal_trace.png" alt="reversal_trace" class="ml-2 mw-90">
+                </p>
+
+                <h3 class="text-center mb-3"><span class="error-primary biggest">Второй Пример</span></h3>
+
+                <p class="error-dark">
+                  <span class="d-block mb-1">СЛАУ задана расширенной матрицей коэффициентов:</span>
+                  <p class="text-center mb-2"> <img src="img/example_2.png" alt="example_2" class="mw-90"></p>
+
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="error-danger biggest">Замечание:</span> при записи результатов отображать будем только 3 цифры после запятой
+                  Метод прогонки является упрощенным методом Гаусса и применяется к трехдиагональным матрицам.
+                  В условии этой задачи система задана именно такой матрицей, т.е. ненулевые элементы стоят
+                  на главной диагонали и на двух её окружающих. Общий вид уравнение в системе: <br>
+                  <span class="big error-danger"> a<sub>i</sub>x<sub>i-1</sub> + b<sub>i</sub>x<sub>i</sub> + c<sub>i</sub>x<sub>i+1</sub> = d<sub>i</sub></span>
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="d-block"><span class="redbull">П</span>рямой ход</span>
+                  <span class="v-middle">1)</span> <img src="img/ex2_row1.png" alt="ex2_row1" class="v-middle mw-90">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="v-text-top">2)</span> <img src="img/ex2_row2.png" alt="ex2_row2" class="v-text-top mw-90">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="v-text-top">3)</span> <img src="img/ex2_row3.png" alt="ex2_row3" class="v-text-top mw-90">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="v-text-top">4)</span> <img src="img/ex2_row4.png" alt="ex2_row4" class="v-text-top mw-90">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="v-text-top">5)</span> <img src="img/ex2_row5.png" alt="ex2_row5" class="v-text-top mw-90">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="d-block mb-2">После прямого хода расширенная матрица коэффициентов принимает вид:</span>
+                  <img src="img/ex2_result1.png" alt="ex2_result1" class="mw-90 ml-3">
+                </p>
+
+                <p class="error-dark mb-3">
+                  <span class="v-middle">Получили что, </span>
+                  <img src="img/ex2_result2.png" alt="ex2_result2" class="v-middle">, <br>
+                  <span class="v-middle">формула для обратного хода:</span>
+                  <img src="img/ex2_result3.png" alt="ex2_result3" class="v-middle">
+                  <img src="img/ex2_result4.png" alt="ex2_result4" class="mw-90 d-block mt-1">
+                </p>
+
+
+              </div>
+            </div>
+
+            <div class="panel__content third">
+              <div class="wrapper bg-light">
+
+                <p class="error-dark mb-2"> <i class="fas fa-clipboard-list error-success fSize-20 mr-1"></i>
+                   <span class="redbull">В</span> количество переменных стоит ограничение только для того чтобы ячейки для ввода не вылезли за пределами блока
+                </p>
+
+                <p class="error-dark mb-2"> <i class="fas fa-clipboard-list error-success fSize-20 mr-1"></i>
+                   <span class="redbull">Я</span>чейки который не были заполнены по умолчанию равна нулю
+                </p>
+
+                <p class="error-dark mb-2"> <i class="fas fa-clipboard-list error-success fSize-20 mr-1"></i>
+                   <span class="redbull">Е</span>сли в пункте количество чисел после запятой выставить"Нет" то конечный <span class="error-danger">x<sub>i</sub></span>
+                   будет округлен до ближайшего целого числа
+                </p>
+
+
+                <p class="error-dark mb-2">  <i class="fas fa-clipboard-list error-success fSize-20 mr-1"></i>
+                  <span class="redbull">А</span> также вы можете по этой <a href="https://wickedtorpedo.github.io/hell/" class="text-primary">ссылке</a>
+                  пользоваться калькулятором для решение нелинейных уравнений вида <span class="error-danger">f(x) = 0</span>
+                </p>
+
+                <p class="error-dark mb-2">  <i class="fas fa-clipboard-list error-success fSize-20 mr-1"></i>
+                  <span class="error-danger">ВАЖНО:</span>
+                  Метод предназначен для решений систем линейных алгебраических уравнений с трёхдиагональными матрицами
+                </p>
+
+                <p class="error-dark mb-2"> <i class="fas fa-clipboard-list error-success fSize-20 mr-1"></i>
+                  Изначально планировал пошаговое решение задачи, от идея не отказался, вот время сильно поджимает
+
+                </p>
+
+                <p class="error-dark mb-2"> <i class="fas fa-clipboard-list error-success fSize-20 mr-1"></i>
+                   <span class="v-middle">Cкоро <span class="error-danger">ГОСТ</span> экзамены, а я не хочу ни готовиться, ни сдать
+                   <i class="far fa-sad-cry fSize-20 v-middle"></i></span>
+                  <span class="v-middle">Политех перестань заниматься фигнёй <i class="far fa-angry fSize-20 v-middle error-danger"></i></span>
+
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+    <script src="js/script.js">
+
+    </script>
+</body>
+</html>
