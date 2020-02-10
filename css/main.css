@@ -154,7 +154,13 @@ body {
     color: #d15128;
 }
 
-
+.text-sorax{
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 1.2em;
+}
 /* xl - >=1200
    lg - >=992
    md - >=768

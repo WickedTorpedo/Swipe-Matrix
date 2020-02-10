@@ -245,6 +245,12 @@ a{text-decoration: none;}
 .text-dark{color: #222 !important;}
 .text-light{color: #f5f5dc !important;}
 
+.w-space-normal{white-space: normal !important;}
+.w-space-pre{white-space: pre !important;}
+.w-space-nowrap{white-space: nowrap !important;}
+.w-space-pre-line{white-space: pre-line !important;}
+.w-space-pre-wrap{white-space: pre-wrap !important;}
+
 .bg-primary{background-color: #008080 !important;}
 .bg-danger{background-color: #de3e44 !important;}
 .bg-dark{background-color: #222 !important;}
@@ -289,6 +295,12 @@ a{text-decoration: none;}
 .error-primary{
   color: #008080;
   font-family: cursive;
+  font-weight: bold;
+}
+
+.error-primary-normal{
+  color: #008080;
+  font-family: 'Arial';
   font-weight: bold;
 }
 
