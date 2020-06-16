@@ -388,11 +388,11 @@ a{text-decoration: none;}
     font-size: 1.5em;
     transition: all .2s ease;
     opacity: 0.8;
-    outline: none;
     box-shadow: none;
     font-family: cursive;
     text-align: center;
     user-select: none;
+    outline: none;
 }
 
 /* начало шаблонов который решил сохранить*/
@@ -444,7 +444,6 @@ a{text-decoration: none;}
   }
 
   50% {
-    /* border: 4px solid rgba(248, 1, 1, 1); */
     border: 4px solid aqua;
   }
 

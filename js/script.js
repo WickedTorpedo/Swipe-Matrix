@@ -1,11 +1,3 @@
-// инструкция о том как работает функци и какие параметры передвать
-// можно прочитать в файле README.txt
-
-// для вывода дробных чисел
-
-
-
-
 
 /* === Табы === begin */
 
@@ -85,14 +77,8 @@ function addTableElements(N) {
     tbody.append(newRows[i]);
   }
 
-  // так как после добавление элементов высота блока меняется поэтому родительскому
-  // блоку надоо сообщить об этом, так как эелемент расположен абсолютно
-  setTimeout (function(){
-    document.querySelector('.panel').style.height = (tabContent[0].offsetHeight + 10) + 'px';
-  }, 1000);
+  setHeightConent();
 
-  // для кнопка очистки чтобы оно всегда находился в правом нижнем углу таблицы
-  document.querySelector('.btn-group').style.width = (document.querySelector('.body-cell').offsetWidth - 10) + 'px';
 }
 /* === end ===  */
 
@@ -107,6 +93,8 @@ function clearAll() {
   for (; iteration < length; iteration++) {
     cells[iteration].value = '';
   }
+
+  setHeightConent();
 }
 /* === end ===  */
 
@@ -431,20 +419,16 @@ function report(x, length) {
     parent.append(p[i]);
   }
 
-  // так как контенты вкладок расположены абсолютно, height: auto не поможет формировать высоту родителя
-  // и что подделать???
-  // --я помогу ведь это моя основная функиця P.S JavaScript
-  setTimeout (function(){
-    document.querySelector('.panel').style.height = (tabContent[0].offsetHeight + 10) + 'px';
-  }, 1000);
-
+  setHeightConent();
 }
 /* === end === */
 
 
+function setHeightConent() {
+    document.querySelector('.panel').style.height = (tabContent[0].offsetHeight + 10) + 'px';
+}
 
-// для кнопка очистки чтобы кнопка очистить всегда находился в правом нижнем углу таблицы
-document.querySelector('.btn-group').style.width = (document.querySelector('.body-cell').offsetWidth - 10) + 'px';
+setHeightConent();
 
 window.addEventListener(`resize`, event => {
   document.querySelector('.btn-group').style.width = (document.querySelector('.body-cell').offsetWidth - 10) + 'px !important';
@@ -455,9 +439,13 @@ window.addEventListener(`resize`, event => {
 document.querySelector('.btn-clear').onclick = clearAll;
 
 document.querySelector('.btn-submit').onclick = function () {
-  console.time('time')
-  var rounding = getValueSelected('selected-2'); // получение значение для округление
 
+  if (document.querySelector('.report').children.length > 0) {
+    alert('очистите предыдущий ');
+    return 0;
+  }
+
+  var rounding = getValueSelected('selected-2'); // получение значение для округление
   let rows = document.querySelectorAll('.task-1 .row').length + 1; // получение длину колонок в каждом строке
   let input = conversion_input('input'); // преоброзование в массив всех input элементов
   let arr = array_chunk(input, rows); // преоброзование из массива в матрицу всех input элементов
@@ -467,15 +455,5 @@ document.querySelector('.btn-submit').onclick = function () {
 
   report(x, rows)  // выводит всех x(-ов) который нашли, принимают в параметр родительского блока для вложение
   /* После того как у нас все x известны можно подвести итог*/
-  console.timeEnd('time');
-  setTimeout (function(){
-    document.querySelector('.panel').style.height = (tabContent[0].offsetHeight + 10) + 'px';
-  }, 1000);
+  setHeightConent();
 }
-
-// так как дочерние элементы панель позицированный абсолютно то высота родителя равна нулю
-// поэтому высота родитлею будет присвоено высота дочерного элемента который активно при загрузке страницы
-
-setTimeout (function(){
-  document.querySelector('.panel').style.height = (tabContent[0].offsetHeight + 10) + 'px';
-}, 1000);
