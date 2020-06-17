@@ -48,14 +48,14 @@ ___
 
 
 
-![example-1.jpg](example-1.jpg)
-![example-1.jpg](example-2.jpg)
+![example-1.jpg](img/example-1.jpg)
+![example-1.jpg](img/example-2.jpg)
 ### Показывается подробный шаг решение задачи
 1. Прямая Прогонка
-![example-1.jpg](example-3.png)
+![example-1.jpg](img/example-3.png)
 
 2. Обратная Прогонка
-![example-1.jpg](example-4.png)
+![example-1.jpg](img/example-4.png)
 
 ---
 Все неизвестные переменные найдены
