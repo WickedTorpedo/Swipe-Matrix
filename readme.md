@@ -9,7 +9,7 @@
 
 Трёхдиагональная матрица:
 
-![tridiagonal-matrix](tridiagonal-matrix.png)
+![tridiagonal-matrix](img/tridiagonal-matrix.png)
 
 Решений состоит из 2 этапов:
 1. Прямая Прогонка
@@ -64,6 +64,6 @@ ___
 |  ---  |    ---   |
 |   x1  |  -9.9871 |
 |   x2  |  5.0257  |
-|   x3  |  -1.1831 |
+|   x3  |  -1.8331 |
 |   x4  | -10.9374 |
 |   x5  | -7.4687  |
