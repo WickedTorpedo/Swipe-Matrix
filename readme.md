@@ -1,3 +1,5 @@
+ссылка на калькулятор - [https://wickedtorpedo.github.io/tridiagonal-matrix/](https://wickedtorpedo.github.io/tridiagonal-matrix/)
+
 # Калькулятор | Метод Прогонки
 
 **Калькулятор** для решение **СЛАУ** с трёхдиагональной матрицей
