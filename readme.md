@@ -1,4 +1,4 @@
- [ссылка на калькулятор](https://baktybek0v.github.io/tridiagonal-matrix/)
+# [ссылка на калькулятор](https://baktybek0v.github.io/tridiagonal-matrix/)
 
 # Калькулятор | Метод Прогонки
 
